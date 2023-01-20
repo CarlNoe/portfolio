@@ -1,6 +1,6 @@
 function Home() {
   return (
-    <div className="bg-primary">
+    <div className="flex justify-center flex-col items-center">
       <h1 className="bg-red-500">Home</h1>
       <p className="text-tertiary-100">Home page content</p>
       <p className="text-tertiary-200">Home page content</p>
