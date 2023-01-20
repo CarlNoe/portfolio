@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div id="App" className="px-[8vw] bg-primary min-h-screen w-screen">
+    <div id="App" className="min-h-screen w-screen bg-primary px-[8vw]">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

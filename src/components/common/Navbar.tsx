@@ -14,7 +14,7 @@ function Navbar(): JSX.Element {
   ];
 
   return (
-    <nav className="flex justify-between items-center py-8 w-full bg-none">
+    <nav className="flex w-full items-center justify-between bg-none py-8">
       <div className="flex">
         <a
           className="mr-8"
