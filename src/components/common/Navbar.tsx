@@ -1,4 +1,5 @@
 import Navlink from "./Navlink";
+import { useState } from "react";
 
 interface Link {
   href: string;
@@ -6,6 +7,8 @@ interface Link {
 }
 
 function Navbar(): JSX.Element {
+  const [isOpen, setIsOpen] = useState(false);
+
   const links: Link[] = [
     { href: "/", name: "Home" },
     { href: "/about", name: "About" },
@@ -14,7 +17,7 @@ function Navbar(): JSX.Element {
   ];
 
   return (
-    <nav className="flex w-full items-center justify-between bg-none py-8">
+    <nav className="absolute left-0 z-10 flex w-full items-center justify-between bg-none py-8 px-[8%]">
       <div className="flex">
         <a
           className="mr-8"
@@ -34,7 +37,14 @@ function Navbar(): JSX.Element {
         </a>
       </div>
 
-      <div className="flex">
+      <button
+        type="button"
+        className="ml-3 rounded-full p-2 text-sm text-secondary md:hidden"
+      >
+        <img src="src\assets\menu.svg" />
+      </button>
+
+      <div className="hidden md:flex">
         {links.map((link) => (
           <Navlink
             href={link.href}

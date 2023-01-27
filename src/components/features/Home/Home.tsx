@@ -1,18 +1,18 @@
 function Home() {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <h1 className="bg-red-500">Home</h1>
-      <p className="text-tertiary-100">Home page content</p>
-      <p className="text-tertiary-200">Home page content</p>
-      <p className="text-tertiary-300">Home page content</p>
-      <p className="text-tertiary-400">Home page content</p>
-      <p className="text-tertiary-500">Home page content</p>
-      <p className="text-tertiary-600">Home page content</p>
-      <p className="text-tertiary-700">Home page content</p>
-      <p className="text-tertiary-800">Home page content</p>
-      <p className="text-tertiary-900">Home page content</p>
-      <p className="text-secondary">Home page content</p>
-    </div>
+    <main className="flex flex-col items-center justify-center">
+      <div className="flex flex-col">
+        <span className="text-white">Hi there ! My name is</span>
+        <span className="text-8xl text-tertiary-500">
+          Noé <span className="text-secondary">CARL</span>
+        </span>
+      </div>
+      <img
+        src="src\assets\moi.png"
+        className="w-[30vh]
+         md:w-[40vh]"
+      />
+    </main>
   );
 }
 

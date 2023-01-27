@@ -21,6 +21,10 @@ module.exports = {
           900: "#3F2134",
         }
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        raleway: ["Raleway", "sans-serif"],
+      },
     },
     plugins: [],
   }
