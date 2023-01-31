@@ -22,8 +22,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
         raleway: ["Raleway", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
     },
     plugins: [],
