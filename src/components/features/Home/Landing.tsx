@@ -36,7 +36,11 @@ function Landing() {
       <div className="hidden w-1/2 justify-center md:flex">
         <img src="src\assets\moi.png" className="w-[25vh] md:w-[45vh]" />
       </div>
-      <a type="button" className="absolute bottom-4" href="#about">
+      <a
+        type="button"
+        className="absolute bottom-4 hidden md:block"
+        href="#about"
+      >
         <img src="src\assets\downarrow.svg" />
       </a>
     </section>

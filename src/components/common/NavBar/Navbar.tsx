@@ -1,5 +1,8 @@
 import Navlink from "./Navlink";
+import NavMenu from "./NavMenu";
 import { useState } from "react";
+
+import BurgerButton from "./BurgerButton/BurgerButton";
 
 interface Link {
   href: string;
@@ -15,6 +18,10 @@ function Navbar(): JSX.Element {
     { href: "/contact", name: "Skills" },
     { href: "/contact", name: "Work" },
   ];
+
+  function handleBurgerClick() {
+    setIsOpen(!isOpen);
+  }
 
   return (
     <nav className="absolute left-0 z-10 flex w-full items-center justify-between bg-none py-8 px-[8%]">
@@ -37,11 +44,8 @@ function Navbar(): JSX.Element {
         </a>
       </div>
 
-      <button
-        type="button"
-        className="ml-3 rounded-full p-2 text-sm text-secondary md:hidden"
-      >
-        <img src="src\assets\menu.svg" />
+      <button className=" md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <BurgerButton isActive={isOpen} />
       </button>
 
       <div className="hidden md:flex">
@@ -54,6 +58,7 @@ function Navbar(): JSX.Element {
           />
         ))}
       </div>
+      {isOpen ? <NavMenu /> : null}
     </nav>
   );
 }
